@@ -1,14 +1,21 @@
 import PhoneMockup from "./PhoneMockup";
+import TrustBadges from "./TrustBadges";
+import PaymentIcons from "./PaymentIcons";
 import { Sparkles, Check } from "lucide-react";
+
 const HeroSection = () => {
-  return <section className="flex flex-col lg:flex-row items-center justify-center max-w-[1100px] mx-auto px-6 pt-40 pb-20 gap-12 lg:gap-20 min-h-screen">
-      {/* Phone Column - Order changes on mobile */}
+  return (
+    <section className="flex flex-col lg:flex-row items-center justify-center max-w-[1100px] mx-auto px-6 pt-40 pb-20 gap-12 lg:gap-20 min-h-screen">
+      {/* Phone Column */}
       <div className="flex-1 flex justify-center lg:justify-end items-center order-1 lg:order-none">
         <PhoneMockup />
       </div>
 
       {/* Text Column */}
-      <div className="flex-1 max-w-[500px] flex flex-col justify-center order-none lg:order-1 text-center lg:text-left">
+      <div className="flex-1 max-w-[500px] flex flex-col justify-center order-none lg:order-1 text-center lg:text-left relative">
+        {/* Trust Badges */}
+        <TrustBadges />
+
         <h1 className="font-black text-3xl md:text-4xl lg:text-5xl leading-tight mb-8">
           Garanta uma Virada de Sucesso e um Réveillon Blindado contra o Estresse
         </h1>
@@ -43,11 +50,23 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* CTA Button */}
-        <a href="https://pay.kiwify.com.br/P5fk4qK" target="_blank" rel="noopener noreferrer" className="self-center lg:self-start bg-primary hover:bg-primary/80 text-primary-foreground px-8 py-4 rounded-lg font-bold text-sm uppercase shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(217,0,217,0.4)]">
-          Quero meu Guia agora
-        </a>
+        {/* CTA Button with gradient */}
+        <div className="relative gradient-cta">
+          <a
+            href="https://pay.kiwify.com.br/P5fk4qK"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="self-center lg:self-start bg-primary hover:bg-primary/80 text-primary-foreground px-8 py-4 rounded-lg font-bold text-sm uppercase shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(217,0,217,0.4)] inline-block"
+          >
+            Quero meu Guia agora
+          </a>
+        </div>
+
+        {/* Payment Icons */}
+        <PaymentIcons />
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
