@@ -5,9 +5,13 @@ import { Sparkles, Check } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-center max-w-[1100px] mx-auto px-6 pt-40 pb-20 gap-12 lg:gap-20 min-h-screen">
+    <section className="flex flex-col lg:flex-row items-center justify-center max-w-[1100px] mx-auto px-6 pt-40 pb-20 gap-12 lg:gap-20 min-h-screen relative">
+      {/* Background glow for title */}
+      <div className="gradient-glow-title hidden lg:block" />
+
       {/* Phone Column */}
-      <div className="flex-1 flex justify-center lg:justify-end items-center order-1 lg:order-none">
+      <div className="flex-1 flex justify-center lg:justify-end items-center order-1 lg:order-none relative">
+        <div className="gradient-glow-phone" />
         <PhoneMockup />
       </div>
 
@@ -50,17 +54,15 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* CTA Button with gradient */}
-        <div className="relative gradient-cta">
-          <a
-            href="https://pay.kiwify.com.br/P5fk4qK"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="self-center lg:self-start bg-primary hover:bg-primary/80 text-primary-foreground px-8 py-4 rounded-lg font-bold text-sm uppercase shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(217,0,217,0.4)] inline-block"
-          >
-            Quero meu Guia agora
-          </a>
-        </div>
+        {/* CTA Button */}
+        <a
+          href="https://pay.kiwify.com.br/P5fk4qK"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="self-center lg:self-start bg-primary hover:bg-primary/80 text-primary-foreground px-8 py-4 rounded-lg font-bold text-sm uppercase shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(217,0,217,0.4)] inline-block"
+        >
+          Quero meu Guia agora
+        </a>
 
         {/* Payment Icons */}
         <PaymentIcons />
