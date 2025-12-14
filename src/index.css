@@ -43,7 +43,9 @@
     --nav-bg: 235 89% 7% / 0.85;
     --gradient-purple: 262 40% 47%;
     --gradient-blue: 221 100% 50%;
+    --gradient-cyan: 200 100% 50%;
     --success: 75 100% 50%;
+    --navy: 240 100% 25%;
   }
 
   .dark {
@@ -78,8 +80,22 @@
     width: 100%;
     height: 100%;
     background: 
+      radial-gradient(circle at 10% 10%, hsl(var(--gradient-cyan) / 0.25) 0%, transparent 40%),
       radial-gradient(circle at 85% 50%, hsl(var(--gradient-purple) / 0.2) 0%, transparent 50%),
       radial-gradient(circle at 15% 20%, hsl(var(--gradient-blue) / 0.15) 0%, transparent 50%);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .gradient-cta::before {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, hsl(var(--gradient-cyan) / 0.3) 0%, transparent 60%);
     z-index: -1;
     pointer-events: none;
   }
