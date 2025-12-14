@@ -21,7 +21,7 @@ const Navbar = () => {
 
         <a href="https://pay.kiwify.com.br/P5fk4qK" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary/80 text-primary-foreground px-3.5 py-2 rounded-md text-[0.65rem] font-bold uppercase flex items-center gap-1.5 transition-all duration-300 hover:-translate-y-0.5">
           <ArrowUpRight className="w-2.5 h-2.5" strokeWidth={2.5} />
-          Quero ter acesso ao e-book
+          Quero meu Guia agora
         </a>
       </div>
     </nav>;

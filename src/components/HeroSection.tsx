@@ -12,7 +12,7 @@ const HeroSection = () => {
       {/* Text Column */}
       <div className="flex-1 max-w-[500px] flex flex-col justify-center order-none lg:order-1 text-center lg:text-left">
         <h1 className="font-black text-3xl md:text-4xl lg:text-5xl leading-tight mb-8">
-          Uma solução para se destacar em todas as pesquisas
+          Garanta uma Virada de Sucesso e um Réveillon Blindado contra o Estresse
         </h1>
 
         <div className="flex flex-col gap-6 mb-10">
@@ -22,11 +22,11 @@ const HeroSection = () => {
               <Search className="w-6 h-6" />
             </div>
             <p className="text-[0.95rem] leading-relaxed text-muted-foreground">
-              A união entre nossas principais{" "}
+              A união entre{" "}
               <strong className="text-foreground font-bold">
-                ferramentas de SEO tradicional
+                técnicas de manejo ambiental
               </strong>{" "}
-              e funcionalidades avançadas de pesquisa com IA + GEO.
+              e estratégias comportamentais validadas para reduzir a ansiedade canina.
             </p>
           </div>
 
@@ -36,11 +36,11 @@ const HeroSection = () => {
               <Sparkles className="w-6 h-6" />
             </div>
             <p className="text-[0.95rem] leading-relaxed text-muted-foreground">
-              Monitore e{" "}
+              Aplique um{" "}
               <strong className="text-foreground font-bold">
-                faça sua marca crescer
+                plano de ação passo a passo
               </strong>{" "}
-              em todos os lugares onde ela é descoberta.
+              simples, prático e que funciona mesmo se você tem pouco tempo até o Ano Novo.
             </p>
           </div>
         </div>
@@ -52,7 +52,7 @@ const HeroSection = () => {
           rel="noopener noreferrer"
           className="self-center lg:self-start bg-primary hover:bg-primary/80 text-primary-foreground px-8 py-4 rounded-lg font-bold text-sm uppercase shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(217,0,217,0.4)]"
         >
-          Quero ter acesso ao e-book
+          Quero meu Guia agora
         </a>
       </div>
     </section>
