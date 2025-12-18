@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import LiberationSection from "@/components/LiberationSection";
 import ForWhomSection from "@/components/ForWhomSection";
 
 const Index = () => {
@@ -7,6 +8,7 @@ const Index = () => {
     <div className="min-h-screen gradient-bg">
       <Navbar />
       <HeroSection />
+      <LiberationSection />
       <ForWhomSection />
     </div>
   );

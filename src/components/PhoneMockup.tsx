@@ -3,10 +3,10 @@ import capaIphone from "@/assets/capa-iphone.png";
 
 const PhoneMockup = () => {
   return (
-    <div className="relative w-full max-w-[550px] h-[450px] lg:h-[500px]">
-      {/* iPad - positioned left with slight perspective */}
+    <div className="relative w-full max-w-[600px] h-[400px] lg:h-[450px]">
+      {/* iPad - landscape, positioned left, behind iPhone */}
       <div 
-        className="absolute left-0 top-0 w-[75%] h-[90%] transform rotate-[-2deg]"
+        className="absolute left-0 top-[10%] w-[85%] aspect-[4/3] z-0 transform rotate-[-1deg]"
         style={{
           filter: 'drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5))',
         }}
@@ -29,7 +29,7 @@ const PhoneMockup = () => {
             <div 
               className="absolute inset-0 pointer-events-none"
               style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 40%, transparent 60%, rgba(255,255,255,0.05) 100%)',
+                background: 'linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 40%, transparent 60%, rgba(255,255,255,0.04) 100%)',
               }}
             />
           </div>
