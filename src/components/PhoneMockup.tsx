@@ -1,65 +1,39 @@
-import guiaCover from "@/assets/guia-cover.png";
+import mockupDevices from "@/assets/mockup-devices.jpeg";
+import capaIpad from "@/assets/capa-ipad.png";
+import capaIphone from "@/assets/capa-iphone.png";
 
 const PhoneMockup = () => {
   return (
-    <div className="relative w-[280px] h-[560px] z-10">
-      {/* 3D iPhone Frame with realistic shadows and depth */}
-      <div 
-        className="w-full h-full rounded-[48px] relative overflow-hidden"
-        style={{
-          background: 'linear-gradient(145deg, #2a2a2a 0%, #1a1a1a 50%, #0f0f0f 100%)',
-          boxShadow: `
-            inset 0 0 0 2px rgba(255,255,255,0.1),
-            inset 0 0 0 4px #1a1a1a,
-            0 0 0 1px rgba(0,0,0,0.8),
-            8px 8px 20px rgba(0,0,0,0.5),
-            20px 30px 60px rgba(0,0,0,0.4),
-            -5px -5px 15px rgba(255,255,255,0.02)
-          `,
-        }}
-      >
-        {/* Titanium Frame Edge Highlight */}
-        <div 
-          className="absolute inset-0 rounded-[48px] pointer-events-none"
-          style={{
-            background: 'linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 30%, transparent 70%, rgba(255,255,255,0.05) 100%)',
-          }}
+    <div className="relative w-full max-w-[500px]">
+      {/* Base mockup image */}
+      <img
+        src={mockupDevices}
+        alt="iPad and iPhone mockup"
+        className="w-full h-auto"
+      />
+      
+      {/* iPad screen overlay */}
+      <div className="absolute top-[2.5%] left-[1.8%] w-[68.5%] h-[94%] overflow-hidden rounded-[3%]">
+        <img
+          src={capaIpad}
+          alt="Capa do Guia - iPad"
+          className="w-full h-full object-cover"
         />
-        
-        {/* Dynamic Island */}
-        <div className="absolute top-[12px] left-1/2 -translate-x-1/2 w-[100px] h-[32px] bg-black rounded-[20px] z-20" />
-
-        {/* Screen bezel */}
-        <div className="absolute inset-[4px] rounded-[44px] bg-black overflow-hidden">
-          {/* Screen Content - Image */}
-          <img 
-            src={guiaCover} 
-            alt="Guia Uma Virada de Sucesso" 
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        {/* Side buttons - Volume */}
-        <div 
-          className="absolute left-[-2px] top-[120px] w-[3px] h-[30px] rounded-l-sm"
-          style={{
-            background: 'linear-gradient(90deg, #333 0%, #1a1a1a 100%)',
-          }}
+        {/* Glass reflection effect */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5 pointer-events-none" />
+      </div>
+      
+      {/* iPhone screen overlay */}
+      <div className="absolute top-[8%] right-[1%] w-[28%] h-[84%] overflow-hidden rounded-[12%]">
+        <img
+          src={capaIphone}
+          alt="Capa do Guia - iPhone"
+          className="w-full h-full object-cover"
         />
-        <div 
-          className="absolute left-[-2px] top-[160px] w-[3px] h-[50px] rounded-l-sm"
-          style={{
-            background: 'linear-gradient(90deg, #333 0%, #1a1a1a 100%)',
-          }}
-        />
-        
-        {/* Side button - Power */}
-        <div 
-          className="absolute right-[-2px] top-[140px] w-[3px] h-[70px] rounded-r-sm"
-          style={{
-            background: 'linear-gradient(270deg, #333 0%, #1a1a1a 100%)',
-          }}
-        />
+        {/* Glass reflection effect */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-white/5 pointer-events-none" />
+        {/* Dynamic Island simulation */}
+        <div className="absolute top-[1.5%] left-1/2 -translate-x-1/2 w-[30%] h-[3%] bg-black rounded-full" />
       </div>
     </div>
   );
