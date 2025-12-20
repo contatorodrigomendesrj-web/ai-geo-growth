@@ -6,10 +6,10 @@ const HeroSection = () => {
   return (
     // REMOVIDO: style={{ borderBottom... }}
     // AJUSTADO: Padding bottom voltou para pb-20 (padrão)
-    <section className="w-full min-h-screen relative overflow-hidden bg-blue-950 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-600 via-blue-900 to-slate-950 pb-20">
+    <section className="w-full min-h-screen relative overflow-hidden bg-[#111184] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#0F52BA] via-[#111184] to-[#080840] pb-20">
       
       {/* Background glow for title */}
-      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-600/30 blur-[100px] rounded-full pointer-events-none hidden lg:block" />
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#0F52BA]/40 blur-[100px] rounded-full pointer-events-none hidden lg:block" />
 
       {/* CONTAINER INTERNO */}
       <div className="flex flex-col lg:flex-row items-center justify-center max-w-[1450px] mx-auto px-6 pt-35 lg:pt-44 gap-8 lg:gap-0 h-full relative z-10">
@@ -23,18 +23,18 @@ const HeroSection = () => {
         {/* Text Column */}
         <div className="flex-1 min-w-[380px] flex flex-col justify-center order-none lg:order-1 text-center lg:text-left relative z-10 pl-4 lg:pl-0">
           
-          <h1 className="font-black text-4xl md:text-5xl lg:text-6xl leading-tight mb-8 text-white">
+          <h1 className="max-w-[600px] font-black text-4xl md:text-5xl lg:text-6xl leading-tight mb-8 text-white">
             Curta a festa enquanto seu cão fica 100% tranquilo.
           </h1>
 
-          <div className="flex flex-col gap-6 mb-10 w-full">
+          <div className="flex flex-col gap-6 mb-10 w-full max-w-[500px]">
             {/* SUBHEAD 1 */}
             <div className="flex gap-4 items-start text-left">
               <div className="min-w-6 mt-1 text-cyan-400">
                 <Check className="w-6 h-6" />
               </div>
-              <p className="text-lg leading-relaxed text-white">
-                Você não precisa mais passar a virada trancado no quarto. Descubra como criar um{" "}
+              <p className="text-base leading-relaxed text-white">
+                Descubra como criar um{" "}
                 <strong className="text-white font-bold">
                   ambiente seguro
                 </strong>{" "}
@@ -50,7 +50,7 @@ const HeroSection = () => {
               <div className="min-w-6 mt-1 text-cyan-400">
                 <Sparkles className="w-6 h-6" />
               </div>
-              <p className="text-lg leading-relaxed text-white">
+              <p className="text-base leading-relaxed text-white">
                 Um guia{" "}
                 <strong className="text-white font-bold">
                   prático e rápido
