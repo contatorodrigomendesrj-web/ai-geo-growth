@@ -2,66 +2,71 @@ import { MessageCircle, Heart } from "lucide-react";
 
 const LiberationSection = () => {
   return (
-    <section className="relative bg-[#F3F4F6] rounded-t-[80px] -mt-20 z-20">
+    <section className="relative bg-[#F3F4F6] rounded-t-[] -mt z-20">
       {/* Pain Agitation Block */}
       <div className="max-w-[1100px] mx-auto px-6 pt-24 pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left - Visual with Arch Frame */}
+       {/* Left - Visual with Arch Frame (ORIGINAL LIMPO) */}
           <div className="relative flex justify-center">
-            {/* Arch Frame */}
+            
+            {/* O ARCO COM A IMAGEM */}
             <div 
-              className="relative w-[280px] md:w-[320px] h-[380px] md:h-[420px] border-2 border-gray-300 overflow-hidden"
+              className="relative w-[280px] md:w-[320px] h-[380px] md:h-[420px] border-2 border-gray-100 overflow-hidden bg-white z-10 shadow-xl"
               style={{
                 borderRadius: '160px 160px 20px 20px',
               }}
             >
-              <img
-                src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=400&h=600&fit=crop&crop=faces"
-                alt="Mulher frustrada olhando o celular"
+              {/* CAMINHO CORRIGIDO: A barra / indica que está na pasta public */}
+              <img 
+                src="dog-fear-arco.jpg"
+                alt="Cão dormindo" 
                 className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-gray-900/5 mix-blend-multiply" />
             </div>
+
+            {/* ELEMENTOS FLUTUANTES (Balões) */}
             
-            {/* Glassmorphism Badge 1 - WhatsApp */}
-            <div 
-              className="absolute top-[15%] -left-4 md:left-0 max-w-[220px] p-3 rounded-xl text-xs"
-              style={{
-                background: 'rgba(255, 255, 255, 0.85)',
-                backdropFilter: 'blur(10px)',
-                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
-              }}
-            >
-              <div className="flex items-center gap-2 mb-1">
-                <MessageCircle className="w-4 h-4 text-green-500" />
-                <span className="font-semibold text-gray-800">WhatsApp</span>
+            {/* Card WhatsApp */}
+            <div className="absolute top-12 -left-4 md:-left-12 z-20 bg-white p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-50 max-w-[180px] md:max-w-[200px]">
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider leading-none">WhatsApp</span>
               </div>
-              <p className="text-gray-700">Amiga, a festa já começou! Cadê você? 🥂</p>
+              <p className="text-xs text-gray-700 leading-relaxed font-medium">
+                Amiga, a festa já começou! Cadê você!? 🥂
+              </p>
             </div>
-            
-            {/* Glassmorphism Badge 2 - Response */}
-            <div 
-              className="absolute bottom-[20%] -right-4 md:right-0 max-w-[240px] p-3 rounded-xl text-xs"
-              style={{
-                background: 'rgba(255, 255, 255, 0.85)',
-                backdropFilter: 'blur(10px)',
-                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
-              }}
-            >
-              <div className="flex items-center gap-2 mb-1">
-                <Heart className="w-4 h-4 text-red-400" />
-                <span className="font-semibold text-gray-800">Sua Resposta</span>
+
+            {/* Card Resposta */}
+            <div className="absolute bottom-12 -right-4 md:-right-8 z-20 bg-white p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-50 max-w-[200px] md:max-w-[220px]">
+               <div className="flex items-center gap-2 mb-2">
+               <div className="w-1.5 h-1.5 rounded-full bg-red-500" />
+                <span className="text-[10px] font-bold text-red-400 uppercase tracking-wider leading-none">Sua Resposta</span>
               </div>
-              <p className="text-gray-700">Não vou conseguir ir... o barulho começou e não posso deixar ele sozinho. Divirtam-se por mim. 💔</p>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Não vou conseguir ir... o barulho começou e não posso deixar ele sozinho. Divirtam-se por mim. 💔
+              </p>
             </div>
+
           </div>
           
-          {/* Right - Copy */}
-          <div className="text-center lg:text-left">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-              Já imaginou este cenário?
-            </h2>
-            <p className="text-gray-600 leading-relaxed text-base md:text-lg">
-              Mais um ano em que você cancela a viagem, recusa o convite daquela festa incrível ou passa a virada trancada no quarto. O problema não é apenas o barulho; é a <strong className="text-gray-900">SUA vida que para</strong> toda vez que os fogos começam. Você merece brindar o ano novo com seus amigos, e não passar a noite em estado de alerta.
+         {/* Right - Copy */}
+<div className="text-center lg:text-left">
+  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+    Já imaginou{" "}
+    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-500">
+      este cenário?
+    </span>
+  </h2>
+           {/* Parágrafo 1: O problema (Texto Cinza) */}
+            <p className="text-gray-600 leading-relaxed text-base md:text-lg mb-6">
+              Mais um ano em que você cancela a viagem, recusa o convite daquela festa incrível ou passa a virada trancada no quarto. O problema não é apenas o barulho; é a SUA vida que para toda vez que os fogos começam.
+            </p>
+
+            {/* Parágrafo 2: A solução/Desejo (Texto Ciano e Bold) */}
+            <p className="text-cyan-600 font-bold text-lg md:text-xl leading-relaxed">
+              Você merece brindar o ano novo com seus amigos, e não passar a noite em estado de alerta.
             </p>
           </div>
         </div>

@@ -1,6 +1,9 @@
 import { ArrowUpRight } from "lucide-react";
+
 const Navbar = () => {
-  return <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-[550px] px-4 py-2.5 glass-nav border border-border z-50 text-primary-foreground rounded-sm shadow-2xl opacity-100 bg-[#050b47]">
+  return (
+    // AQUI ESTÁ A MUDANÇA: Adicionei '/80' na cor e 'backdrop-blur-md'
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-[600px] px-4 py-2.5 border border-border z-50 text-primary-foreground rounded-sm shadow-2xl bg-[#050b47]/80 backdrop-blur-md">
       <div className="flex items-center justify-between">
         <a href="#" className="font-black text-[0.7rem] uppercase tracking-wide leading-tight">
           Uma Virada<br />de Sucesso
@@ -24,6 +27,7 @@ const Navbar = () => {
           Quero meu Guia agora
         </a>
       </div>
-    </nav>;
+    </nav>
+  );
 };
 export default Navbar;
