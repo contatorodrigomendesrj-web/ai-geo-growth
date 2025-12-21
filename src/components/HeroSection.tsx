@@ -24,7 +24,7 @@ const HeroSection = () => {
                   * Mude para translate-x-10 (vai pra direita).
                   * Mude para -translate-x-10 (vai pra esquerda).
           */}
-          <div className="relative mt-36 transform scale-[2.8] translate-x-20 lg:scale-100 lg:translate-x-0 lg:mt-0 origin-center">
+          <div className="relative mt-36 transform scale-[2.7] translate-x-20 lg:scale-100 lg:translate-x-0 lg:mt-0 origin-center">
              
              {/* Glow atrás do celular */}
              <div className="absolute inset-0 bg-blue-600/10 blur-3xl rounded-full pointer-events-none transform translate-x-0 lg:translate-x-4" />
