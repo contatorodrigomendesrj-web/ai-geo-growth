@@ -6,7 +6,7 @@ import fogosimg from "../assets/fogos.jpeg";
 const LiberationSection = () => {
   return (
     // SEÇÃO PRINCIPAL
-    <section className="relative bg-[#F3F4F6] rounded-t-[40px] -mt-24 md:-mt-10 z-20 pb-20">
+    <section className="relative bg-[#F3F4F6] rounded-t-[40px] -mt-24 md:-mt-10 z-20 pb-0">
       
       {/* Bloco 1: A Dor e a Agitação */}
       <div className="max-w-[1100px] mx-auto px-6 pt-12 md:pt-24 pb-8">
