@@ -6,6 +6,7 @@ import fogosimg from "../assets/fogos.jpeg";
 const LiberationSection = () => {
   return (
     // SEÇÃO PRINCIPAL
+    // Mantido original: rounded-t-[40px]
     <section className="relative bg-[#F3F4F6] rounded-t-[40px] -mt-24 md:-mt-10 z-20 pb-0">
       
       {/* Bloco 1: A Dor e a Agitação */}
@@ -54,8 +55,9 @@ const LiberationSection = () => {
           
          {/* DIREITA - O Texto */}
           <div className="text-center lg:text-left mt-8 lg:mt-0">
+            {/* AJUSTE DO TÍTULO: Quebra de linha forçada no mobile */}
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-              Já imaginou{" "}
+              Já imaginou <br className="block md:hidden" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-500">
                 este cenário?
               </span>
@@ -77,16 +79,13 @@ const LiberationSection = () => {
         <div className="w-full max-w-[800px] h-[1px] bg-gray-300 rounded-full my-4" />
       </div>
 
-      {/* Bloco 2: A Inveja do Instagram (Cards Estilo Post) */}
+      {/* Bloco 2: A Inveja do Instagram (Cards Originais mantidos) */}
       <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-10 mt-10">
         
         {/* Card 1 */}
         <div className="w-[280px] bg-white rounded-xl shadow-xl border border-gray-100 transform -rotate-3 hover:rotate-0 transition-transform duration-300 z-10">
-          {/* Header com Foto de Perfil */}
           <div className="flex items-center p-3 border-b border-gray-100">
-            {/* Anel colorido do stories */}
             <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-yellow-400 to-purple-600 p-[2px]">
-              {/* AQUI ESTÁ A MUDANÇA: Tag IMG em vez do DIV branco */}
               <img 
                 src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=100&h=100&fit=crop&crop=faces" 
                 alt="Foto de perfil eurafa.cabral"
@@ -100,7 +99,6 @@ const LiberationSection = () => {
             <div className="ml-auto text-gray-400">•••</div>
           </div>
           
-          {/* Imagem */}
           <div className="aspect-square w-full bg-gray-100 relative">
             <img 
               src={fogosimg} 
@@ -109,7 +107,6 @@ const LiberationSection = () => {
             />
           </div>
 
-          {/* Footer (Ícones Corrigidos) */}
           <div className="p-3">
             <div className="flex items-center justify-between mb-2">
               <div className="flex gap-3 text-gray-700">
@@ -125,10 +122,8 @@ const LiberationSection = () => {
 
         {/* Card 2 */}
         <div className="w-[280px] bg-white rounded-xl shadow-xl border border-gray-100 transform rotate-3 hover:rotate-0 transition-transform duration-300 -mt-12 md:mt-0 md:-ml-8 z-20">
-          {/* Header com Foto de Perfil */}
           <div className="flex items-center p-3 border-b border-gray-100">
             <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-yellow-400 to-purple-600 p-[2px]">
-              {/* MUDANÇA AQUI: Foto de perfil da Carol */}
               <img 
                 src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces" 
                 alt="Foto de perfil carol-tavares" 
@@ -142,7 +137,6 @@ const LiberationSection = () => {
             <div className="ml-auto text-gray-400">•••</div>
           </div>
           
-          {/* Imagem do Post */}
           <div className="aspect-square w-full bg-gray-100 relative">
             <img 
               src={brindeimg}
@@ -151,7 +145,6 @@ const LiberationSection = () => {
             />
           </div>
 
-          {/* Footer */}
           <div className="p-3">
             <div className="flex items-center justify-between mb-2">
               <div className="flex gap-3 text-gray-700">
@@ -167,10 +160,9 @@ const LiberationSection = () => {
 
       </div>
       
-     {/* Texto de Impacto - O Pulo do Gato (Ajustado) */}
+     {/* Texto de Impacto */}
       <div className="mt-12 text-center px-6">
         <div className="inline-flex items-center bg-red-50 border border-red-100 px-3 py-1 rounded-full mb-4">
-          {/* Bolinha pulsante efeito radar */}
           <span className="relative flex h-2 w-2 mr-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
@@ -184,17 +176,14 @@ const LiberationSection = () => {
         </p>
       </div>
 
-      {/* Bloco 3: CTA de Alta Conversão */}
+      {/* Bloco 3: CTA */}
       <div className="max-w-[900px] mx-auto px-4 pt-12 pb-8 text-center">
         
-        {/* Headline com Gatilho de "Chega!" */}
         <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-8 leading-tight">
           Chegou a hora de parar de ser <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-indigo-600">refém do medo</span> dentro da sua própria casa.
         </h2>
         
-        {/* Box de Autoridade (Substituindo a tracejada) */}
         <div className="relative bg-white rounded-3xl p-6 md:p-10 shadow-2xl shadow-blue-900/10 border border-blue-50 mb-10 overflow-hidden group hover:border-blue-200 transition-colors duration-300">
-          {/* Efeito de luz ao fundo */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full blur-3xl opacity-50 -mr-16 -mt-16"></div>
           
           <div className="relative z-10">
@@ -204,16 +193,15 @@ const LiberationSection = () => {
           </div>
         </div>
         
-        {/* Botão com CTA Ajustado (NOVO: Slim e Azul) */}
+        {/* AJUSTE DO BOTÃO CTA: Removido w-full, agora é w-auto com padding adequado */}
         <div className="flex flex-col items-center gap-4">
           <a
             href="https://pay.kiwify.com.br/P5fk4qK"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full md:w-auto bg-[#111184] hover:bg-[#0a0a5c] text-white px-6 py-3 rounded-xl font-bold text-sm md:text-lg shadow-lg shadow-blue-900/20 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex items-center justify-center gap-2 group"
+            className="w-auto bg-[#111184] hover:bg-[#0a0a5c] text-white px-8 py-4 rounded-xl font-bold text-sm md:text-lg shadow-lg shadow-blue-900/20 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex items-center justify-center gap-2 group"
           >
             QUERO SALVAR MEU RÉVEILLON
-            {/* Ícone levemente menor no mobile (width="18") para ficar proporcional */}
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
           

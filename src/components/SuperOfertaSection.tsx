@@ -10,7 +10,7 @@ const SuperOfertaSection = () => {
   ];
 
   return (
-    <section className="relative bg-[#0a1128] pt-32 md:pt-32 pb-20 px-6 overflow-hidden">
+    <section className="relative bg-[#0a1128] pt-12 md:pt-32 pb-20 px-6 overflow-hidden">
       
       {/* Luzes de fundo */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
@@ -18,28 +18,28 @@ const SuperOfertaSection = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-32 items-center">
           
           {/* --- COLUNA DA ESQUERDA --- */}
-          <div className="text-white space-y-8 order-1 lg:order-1">
+          <div className="text-white space-y-10 order-1 lg:order-1 text-center lg:text-left">
             <div>
              <h2 className="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
                 Garanta a <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">tranquilidade do seu Réveillon</span> por um valor simbólico.              
               </h2>
-              <p className="text-blue-100 text-base md:text-xl leading-relaxed">
+              <p className="text-blue-100 text-base md:text-xl leading-relaxed max-w-xl mx-auto lg:mx-0">
                 Pare de gastar com soluções que não funcionam. Reconquiste a sua paz e a do seu melhor amigo.
               </p>
             </div>
             
-            <div className="space-y-4">
+            <div className="space-y-6">
               <p className="text-white font-bold text-xl">
-                Ao se inscrever hoje, você recebe acesso imediato:
+                Garantindo hoje, você recebe acesso imediato:
               </p>
-              <ul className="space-y-3">
+              <ul className="space-y-4 inline-block text-left mx-auto lg:mx-0">
                 {benefits.map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-7 h-7 text-cyan-400 flex-shrink-0 mt-0.5 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
-                    <span className="text-lg text-blue-50 font-medium">{item}</span>
+                    <CheckCircle2 className="w-6 h-6 md:w-7 md:h-7 text-cyan-400 flex-shrink-0 mt-0.5 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
+                    <span className="text-base md:text-lg text-blue-50 font-medium leading-snug">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -53,8 +53,7 @@ const SuperOfertaSection = () => {
             
             <div className="relative bg-[#111184]/90 backdrop-blur-xl rounded-[2.5rem] border-2 border-white/20 shadow-2xl p-8 md:p-12 text-center transform hover:scale-[1.01] transition-all duration-300">
               
-              {/* Âncora de Preço (RISCO VERMELHO) */}
-              {/* Adicionei 'decoration-red-500 decoration-2' para riscar de vermelho */}
+              {/* Âncora de Preço */}
               <p className="text-gray-300 font-medium text-xl mb-4 relative inline-block">
                 De <span className="line-through decoration-red-500 decoration-2 text-gray-400">R$ 47,90</span>
                 <span className="absolute -top-3 -right-12 bg-cyan-500 text-[#0a1128] text-xs font-bold px-2 py-0.5 rounded-full">
@@ -71,13 +70,20 @@ const SuperOfertaSection = () => {
                 <p className="text-blue-200 text-lg mt-2">pagamento único, acesso vitalício</p>
               </div>
 
-              {/* Botão CTA (AJUSTE DE LARGURA) */}
-              {/* Mudei 'w-full' para 'w-full md:w-auto mx-auto' para ele não esticar tanto no desktop */}
-              <button className="group relative w-full md:w-auto mx-auto flex justify-center py-5 px-10 border-transparent font-extrabold rounded-2xl text-xl text-[#0a1128] bg-gradient-to-r from-cyan-400 to-cyan-500 hover:from-cyan-300 hover:to-cyan-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 shadow-[0_0_30px_rgba(34,211,238,0.4)] transition-all duration-300 hover:shadow-[0_0_50px_rgba(34,211,238,0.6)] active:scale-95 uppercase tracking-wider">
-                <span className="flex items-center gap-2">
-                  Quero Salvar Meu Réveillon
-                </span>
-              </button>
+              {/* Botão CTA - SOLUÇÃO FINAL DE CENTRALIZAÇÃO */}
+              {/* Envolvi em uma div w-full flex justify-center. Isso força o centro. */}
+              <div className="w-full flex justify-center">
+                <a 
+                  href="https://pay.kiwify.com.br/P5fk4qK" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group relative flex items-center justify-center py-3 px-6 md:py-4 md:px-8 border-transparent font-extrabold rounded-2xl text-sm md:text-xl text-[#0a1128] bg-gradient-to-r from-cyan-400 to-cyan-500 hover:from-cyan-300 hover:to-cyan-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 shadow-[0_0_30px_rgba(34,211,238,0.4)] transition-all duration-300 hover:shadow-[0_0_50px_rgba(34,211,238,0.6)] active:scale-95 uppercase tracking-wider cursor-pointer"
+                >
+                  <span className="flex items-center gap-2 whitespace-nowrap">
+                    Quero Salvar Meu Réveillon
+                  </span>
+                </a>
+              </div>
 
               {/* Garantia e Pagamento */}
               <div className="mt-6 flex flex-col items-center gap-3 text-sm text-blue-200/80 font-medium">
