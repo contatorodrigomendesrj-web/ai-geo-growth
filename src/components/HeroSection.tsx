@@ -1,6 +1,6 @@
 import PhoneMockup from "./PhoneMockup";
 import PaymentIcons from "./PaymentIcons";
-import { Sparkles, Check } from "lucide-react";
+import { Sparkles, Check } from "lucide-react"; 
 
 const HeroSection = () => {
   return (
@@ -10,39 +10,29 @@ const HeroSection = () => {
       <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#0F52BA]/40 blur-[100px] rounded-full pointer-events-none hidden lg:block" />
 
       {/* CONTAINER PRINCIPAL */}
-      {/* AJUSTE FEITO: mudei 'pt-32' para 'pt-24' para subir o conteúdo no mobile */}
-      <div className="flex flex-col lg:flex-row items-center justify-center max-w-[1450px] mx-auto px-6 pt-24 lg:pt-44 gap-10 lg:gap-0 h-full relative z-10">
+      {/* AJUSTE MOBILE: 'pt-40' (160px) garante que desça bem no celular.
+         AJUSTE DESKTOP: 'lg:pt-44' mantém a posição original do desktop.
+      */}
+      <div className="flex flex-col lg:flex-row items-center justify-center max-w-[1450px] mx-auto px-6 pt-40 lg:pt-44 gap-10 lg:gap-0 h-full relative z-10">
         
         {/* COLUNA DO IPHONE (MOCKUP) */}
         <div className="w-full flex justify-center items-center lg:w-[800px] lg:justify-end lg:items-center order-1 lg:order-none relative lg:-mr-24 z-0 py-12 lg:py-0">
           
-          {/* WRAPPER COM CONTROLES DE TAMANHO E POSIÇÃO */}
           <div className="relative mt-36 transform scale-[2.7] translate-x-20 lg:scale-[1.10] lg:translate-x-0 lg:mt-0 origin-center">
-             
-             {/* Glow atrás do celular */}
              <div className="absolute inset-0 bg-blue-600/10 blur-3xl rounded-full pointer-events-none transform translate-x-0 lg:translate-x-4" />
-             
-             {/* Sombra Suave */}
              <div className="drop-shadow-[0_25px_35px_rgba(0,0,30,0.3)]">
                <PhoneMockup />
              </div>
-          
           </div>
 
         </div>
 
         {/* COLUNA DE TEXTO */}
-        <div className="flex-1 w-full max-w-lg lg:max-w-none flex flex-col justify-center order-none lg:order-1 text-center lg:text-left relative z-10 pl-0 lg:pl-0">
+        {/* AJUSTE MOBILE: 'mt-8' adiciona uma margem extra só no celular para afastar do topo.
+           AJUSTE DESKTOP: 'lg:mt-0' remove essa margem em telas grandes.
+        */}
+        <div className="flex-1 w-full max-w-lg lg:max-w-none flex flex-col justify-center order-none lg:order-1 text-center lg:text-left relative z-10 pl-0 lg:pl-0 mt-8 lg:mt-0">
           
-          {/* TÍTULO REFORMULADO - AJUSTE DE FONTE E QUEBRA */}
-          {/* AJUSTES FEITOS:
-              1. Tamanho: Reduzi de 'text-4xl' para 'text-3xl sm:text-4xl' (um pouco menor no mobile).
-              2. Quebra: Mudei a palavra "fica" para a linha de cima. 
-                 Agora visualmente fica:
-                 "Curta a festa" (Média)
-                 "enquanto seu cão fica" (Larga)
-                 "100% tranquilo" (Média) -> Isso resolve o problema visual de "pirâmide".
-          */}
           <h1 className="font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight mb-10 lg:mb-16 text-white mx-auto lg:mx-0">
             Curta a festa <br className="block md:hidden" />
             enquanto seu cão fica <br className="block md:hidden" />
@@ -54,7 +44,6 @@ const HeroSection = () => {
           {/* SUBHEADS */}
           <div className="flex flex-col gap-8 mb-12 w-full items-center lg:items-start">
             
-            {/* Bloco 1 */}
             <div className="flex gap-4 items-start text-left max-w-md lg:max-w-[550px]">
               <div className="min-w-6 mt-1 text-cyan-500">
                 <Check className="w-6 h-6" />
@@ -71,7 +60,6 @@ const HeroSection = () => {
               </p>
             </div>
 
-            {/* Bloco 2 */}
             <div className="flex gap-4 items-start text-left max-w-md lg:max-w-[580px]">
               <div className="min-w-6 mt-1 text-cyan-500">
                 <Sparkles className="w-6 h-6" />
@@ -89,18 +77,23 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* CONTAINER BOTÃO E ÍCONES */}
-          <div className="flex flex-col items-center self-center lg:self-start gap-2">
+          {/* ÁREA DE AÇÃO */}
+          <div className="flex flex-col items-center self-center lg:self-start gap-4">
+            
             <a
               href="https://pay.kiwify.com.br/P5fk4qK"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-5 rounded-lg font-bold text-sm uppercase shadow-lg shadow-primary/20 transition-all duration-300 hover:-translate-y-0.5 inline-block"
+              className="bg-[#FF00FF] hover:bg-[#d500f9] text-white px-8 py-5 rounded-lg font-bold text-sm md:text-base uppercase shadow-[0_0_20px_rgba(255,0,255,0.4)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(255,0,255,0.6)] inline-block tracking-wide w-full md:w-auto text-center"
             >
               QUERO UMA VIRADA SEM ESTRESSE
             </a>
 
-            <PaymentIcons />
+            {/* Ícones de Pagamento */}
+            <div className="mt-2">
+              <PaymentIcons />
+            </div>
+
           </div>
         </div>
       </div>

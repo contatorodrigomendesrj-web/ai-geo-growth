@@ -10,7 +10,8 @@ const SuperOfertaSection = () => {
   ];
 
   return (
-    <section className="relative bg-[#0a1128] pt-12 md:pt-32 pb-20 px-6 overflow-hidden">
+    // AJUSTE: Mudei pb-20 para pb-32 para dar mais espaço antes da próxima seção
+    <section className="relative bg-[#0a1128] pt-12 md:pt-32 pb-32 px-6 overflow-hidden">
       
       {/* Luzes de fundo */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
@@ -70,8 +71,7 @@ const SuperOfertaSection = () => {
                 <p className="text-blue-200 text-lg mt-2">pagamento único, acesso vitalício</p>
               </div>
 
-              {/* Botão CTA - SOLUÇÃO FINAL DE CENTRALIZAÇÃO */}
-              {/* Envolvi em uma div w-full flex justify-center. Isso força o centro. */}
+              {/* Botão CTA */}
               <div className="w-full flex justify-center">
                 <a 
                   href="https://pay.kiwify.com.br/P5fk4qK" 
